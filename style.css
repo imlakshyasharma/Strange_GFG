@@ -1,0 +1,294 @@
+html {
+  scroll-behavior: smooth;
+}
+
+.font-cinzel { font-family: 'Cinzel', serif; }
+body { font-family: 'Inter', sans-serif; }
+
+.portal-img {
+  position: absolute;
+  width: 550px;
+  max-width: 80vw;
+  height: auto;
+  opacity: 0.85;
+  animation: spin 15s linear infinite, pulseGlow 4s ease-in-out infinite;
+  filter: drop-shadow(0 0 30px rgba(255, 107, 53, 0.4));
+  z-index: 1;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes pulseGlow {
+  0%, 100% { filter: drop-shadow(0 0 20px rgba(255, 107, 53, 0.3)); }
+  50% { filter: drop-shadow(0 0 45px rgba(255, 107, 53, 0.6)); }
+}
+}
+.portal-ring::before {
+  content: '';
+  position: absolute;
+  inset: -40px;
+  border: 1px dashed rgba(255, 107, 53, 0.3);
+  border-radius: 50%;
+  animation: spin 15s linear infinite reverse;
+}
+
+.countdown-box {
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  border-radius: 12px;
+  padding: 1.5rem 1.2rem;
+  min-width: 90px;
+  background: rgba(139, 0, 0, 0.08);
+}
+
+.reg-input {
+  background: rgba(20, 20, 25, 0.6);
+  border: 1px solid rgba(212, 175, 55, 0.25);
+  border-radius: 8px;
+  padding: 0.85rem 1.1rem;
+  color: white;
+  outline: none;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+.reg-input:focus {
+  border-color: rgba(255, 107, 53, 0.7);
+  box-shadow: 0 0 12px rgba(255, 107, 53, 0.3);
+}
+.reg-input::placeholder {
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.reg-glow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 600px;
+  height: 600px;
+  transform: translate(-50%, -50%);
+  background: radial-gradient(circle, rgba(139,0,0,0.25) 0%, transparent 70%);
+  z-index: 0;
+  pointer-events: none;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.highlight-card {
+  background: rgba(20, 20, 25, 0.5);
+  border: 1px solid rgba(212, 175, 55, 0.2);
+  border-radius: 16px;
+  padding: 2.5rem 2rem;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+}
+
+.highlight-card:hover {
+  transform: translateY(-8px);
+  border-color: rgba(255, 107, 53, 0.6);
+  box-shadow: 0 0 25px rgba(255, 107, 53, 0.2);
+}
+
+.sigil {
+  font-size: 2.5rem;
+  color: rgba(255, 107, 53, 0.8);
+  margin-bottom: 1rem;
+  transition: transform 0.4s ease;
+}
+
+.highlight-card:hover .sigil {
+  transform: rotate(180deg) scale(1.2);
+}
+
+#navbar {
+  background: transparent;
+}
+#navbar.scrolled {
+  background: rgba(10, 10, 15, 0.85);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(212, 175, 55, 0.15);
+}
+
+.nav-link {
+  color: rgba(255, 255, 255, 0.8);
+  transition: color 0.3s;
+  position: relative;
+}
+.nav-link:hover {
+  color: rgba(255, 107, 53, 0.9);
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Hide default cursor on desktop only */
+@media (min-width: 768px) {
+  body {
+    cursor: none;
+  }
+}
+
+#cursorRing {
+  position: fixed;
+  width: 36px;
+  height: 36px;
+  border: 2px solid rgba(255, 107, 53, 0.8);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9999;
+  transform: translate(-50%, -50%);
+  transition: width 0.2s, height 0.2s, border-color 0.2s, transform 0.05s linear;
+  box-shadow: 0 0 12px rgba(255, 107, 53, 0.5), inset 0 0 8px rgba(212, 175, 55, 0.4);
+}
+
+#cursorDot {
+  position: fixed;
+  width: 5px;
+  height: 5px;
+  background: rgba(212, 175, 55, 1);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9999;
+  transform: translate(-50%, -50%);
+}
+
+/* Grow on hover over clickable elements */
+.cursor-hover {
+  width: 60px !important;
+  height: 60px !important;
+  border-color: rgba(212, 175, 55, 1) !important;
+  animation: cursorSpin 2s linear infinite;
+}
+
+@keyframes cursorSpin {
+  from { transform: translate(-50%, -50%) rotate(0deg); }
+  to { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+.portal-video {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 1050px;
+  max-width: 90vw;
+  height: 750px;
+  max-height: 65vw;
+  object-fit: cover;
+  opacity: 0.9;
+  mix-blend-mode: screen;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.portal-fade {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 1050px;
+  max-width: 90vw;
+  height: 750px;
+  max-height: 65vw;
+  z-index: 2;
+  pointer-events: none;
+  background: radial-gradient(ellipse, transparent 25%, black 55%);
+}
+
+.tracking-\[0\.3em\] {
+  letter-spacing: 0.3em;
+}
+
+/* Black flash overlay for portal travel effect */
+#portalOverlay {
+  position: fixed;
+  inset: 0;
+  background: black;
+  opacity: 0;
+  pointer-events: none;
+  z-index: 9998;
+  transition: opacity 0.6s ease;
+}
+#portalOverlay.active {
+  opacity: 1;
+  pointer-events: all;
+}
+
+/* Smooth transform transitions on portal elements */
+.portal-video,
+.portal-fade {
+  transition: transform 1.4s cubic-bezier(0.65, 0, 0.35, 1), opacity 1.4s ease;
+}
+
+/* When zooming: video scales up massively and fades */
+#hero.portal-zoom .portal-video {
+  transform: translate(-50%, -50%) scale(10);
+  opacity: 0;
+}
+#hero.portal-zoom .portal-fade {
+  transform: translate(-50%, -50%) scale(10);
+}
+
+/* Hero text fades out quickly during zoom */
+#hero.portal-zoom h1,
+#hero.portal-zoom p,
+#hero.portal-zoom a {
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+#loadingScreen {
+  position: fixed;
+  inset: 0;
+  background: black;
+  z-index: 99999;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  transition: opacity 0.8s ease, visibility 0.8s ease;
+}
+
+#loadingScreen.hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.loader-ring {
+  width: 90px;
+  height: 90px;
+  border: 2px solid rgba(212, 175, 55, 0.2);
+  border-top: 2px solid rgba(255, 107, 53, 0.9);
+  border-radius: 50%;
+  animation: loaderSpin 1s linear infinite, loaderGlow 1.5s ease-in-out infinite;
+}
+
+@keyframes loaderSpin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes loaderGlow {
+  0%, 100% { box-shadow: 0 0 10px rgba(255, 107, 53, 0.3); }
+  50% { box-shadow: 0 0 30px rgba(255, 107, 53, 0.7); }
+}
+
+.loader-text {
+  font-family: 'Cinzel', serif;
+  letter-spacing: 0.25em;
+  font-size: 0.85rem;
+  color: rgba(212, 175, 55, 0.8);
+}

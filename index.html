@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Multiverse of Madness | GFG Event</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-black text-white">
+<div id="loadingScreen">
+  <div class="loader-ring"></div>
+  <p class="loader-text">ENTERING THE MULTIVERSE</p>
+</div>
+<div id="portalOverlay"></div>
+<div id="cursorRing"></div>
+<div id="cursorDot"></div>
+
+  <!-- NAVBAR -->
+<nav id="navbar" class="fixed top-0 left-0 w-full z-50 px-6 py-4 flex justify-between items-center transition-all duration-300">
+  <div class="font-cinzel text-lg text-amber-400 tracking-wider">GFG × STRANGE</div>
+
+  <div class="hidden md:flex gap-8 text-sm">
+    <a href="#hero" class="nav-link">Home</a>
+    <a href="#highlights" class="nav-link">Highlights</a>
+    <a href="#register" class="nav-link">Register</a>
+  </div>
+
+  <!-- mobile menu button -->
+  <button id="menuBtn" class="md:hidden text-amber-400 text-2xl">☰</button>
+</nav>
+
+<!-- mobile
+
+<!-- HERO -->
+<section id="hero" class="h-screen flex flex-col items-center justify-center relative overflow-hidden">
+  <video class="portal-video" autoplay loop muted playsinline>
+    <source src="portal.mp4" type="video/mp4">
+  </video>
+  <div class="portal-fade"></div>
+  
+  <h1 class="font-cinzel text-5xl md:text-7xl text-center z-10">ENTER THE MULTIVERSE</h1>
+  <p class="mt-4 text-lg text-amber-400 z-10">GFG Bennett University Presents</p>
+  <a href="#register" id="portalBtn" class="mt-8 inline-block px-8 py-3 border border-amber-400 rounded-full z-10 hover:bg-amber-400 hover:text-black transition">
+    Register Now
+</a>
+</section>
+
+<!-- ABOUT -->
+<section class="reveal py-28 px-6 text-center relative">
+  <p class="text-amber-500 tracking-[0.3em] text-sm md:text-base font-cinzel mb-6">
+    WHERE CODE MEETS THE MYSTIC ARTS
+  </p>
+
+  <h2 class="font-cinzel text-2xl md:text-4xl leading-snug max-w-3xl mx-auto mb-8 text-gray-100">
+    The Multiverse isn't just magic.<br>
+    It's an infinite space of possibilities.
+  </h2>
+
+  <p class="max-w-2xl mx-auto text-gray-400 text-base md:text-lg leading-relaxed mb-6">
+    <span class="text-amber-400 font-semibold">MARVEL × WEB DESIGN</span> brings together technology, creativity, and competition in a Doctor Strange-inspired experience by the
+    <span class="text-gray-200">GeeksForGeeks Student Chapter, Bennett University</span>.
+  </p>
+
+  <p class="max-w-2xl mx-auto text-gray-400 text-base md:text-lg leading-relaxed mb-10">
+    Step through the portal and take on challenges that test your logic, creativity, problem-solving, and technical skills. Every challenge opens a new path. Every decision shapes your journey.
+  </p>
+
+  <p class="font-cinzel text-xl md:text-2xl text-amber-400 tracking-wide">
+    One event. Infinite possibilities. <span class="text-white">Enter the Multiverse.</span>
+  </p>
+</section>
+
+<!-- HIGHLIGHTS, COUNTDOWN, CTA -->
+<!-- baad mein add karenge -->
+
+<!-- HIGHLIGHTS -->
+<section id="highlights" class="reveal py-24 px-6">
+  <h2 class="font-cinzel text-3xl md:text-4xl text-center mb-16">Mystic Highlights</h2>
+
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+
+  <div class="highlight-card reveal">
+    <div class="sigil">✦</div>
+    <h3 class="font-cinzel text-xl mb-2 text-amber-400">Design Challenge</h3>
+    <p class="text-gray-400 text-sm">Build a cinematic, Marvel-inspired web experience from scratch — your creativity, your rules.</p>
+  </div>
+
+  <div class="highlight-card reveal">
+    <div class="sigil">◈</div>
+    <h3 class="font-cinzel text-xl mb-2 text-amber-400">Live Judging</h3>
+    <p class="text-gray-400 text-sm">Get evaluated on design thinking, execution, and attention to detail by the GFG core team.</p>
+  </div>
+
+  <div class="highlight-card reveal">
+    <div class="sigil">✧</div>
+    <h3 class="font-cinzel text-xl mb-2 text-amber-400">Junior Core Entry</h3>
+    <p class="text-gray-400 text-sm">Top performers earn a spot in the GFG Bennett Technical Team — Junior Core selection round.</p>
+  </div>
+
+  <div class="highlight-card reveal">
+    <div class="sigil">⟡</div>
+    <h3 class="font-cinzel text-xl mb-2 text-amber-400">Open Tech Stack</h3>
+    <p class="text-gray-400 text-sm">HTML, React, Tailwind, GSAP, Three.js — use whatever powers your vision best.</p>
+  </div>
+
+  <div class="highlight-card reveal">
+    <div class="sigil">❖</div>
+    <h3 class="font-cinzel text-xl mb-2 text-amber-400">Solo Sorcery</h3>
+    <p class="text-gray-400 text-sm">A solo round — your skills, your design instincts, your multiverse to build.</p>
+  </div>
+
+</div>
+</section>
+
+<!-- COUNTDOWN -->
+<section class="reveal py-24 px-6 text-center bg-gradient-to-b from-black to-red-950/20">
+  <h2 class="font-cinzel text-3xl md:text-4xl mb-10">Submission Closes In</h2>
+  <div id="countdown" class="flex justify-center gap-6 md:gap-12 flex-wrap">
+    <div class="countdown-box">
+      <span id="days" class="text-4xl md:text-6xl font-cinzel text-amber-400">00</span>
+      <p class="text-sm text-gray-400 mt-2">Days</p>
+    </div>
+    <div class="countdown-box">
+      <span id="hours" class="text-4xl md:text-6xl font-cinzel text-amber-400">00</span>
+      <p class="text-sm text-gray-400 mt-2">Hours</p>
+    </div>
+    <div class="countdown-box">
+      <span id="minutes" class="text-4xl md:text-6xl font-cinzel text-amber-400">00</span>
+      <p class="text-sm text-gray-400 mt-2">Minutes</p>
+    </div>
+    <div class="countdown-box">
+      <span id="seconds" class="text-4xl md:text-6xl font-cinzel text-amber-400">00</span>
+      <p class="text-sm text-gray-400 mt-2">Seconds</p>
+    </div>
+  </div>
+</section>
+
+<!-- REGISTRATION CTA -->
+<section id="register" class="reveal py-24 px-6 relative overflow-hidden">
+  <div class="max-w-md mx-auto text-center relative z-10">
+    <h2 class="font-cinzel text-3xl md:text-4xl mb-3">Join the Mystic Arts</h2>
+    <p class="text-gray-400 mb-10">Seats limited across dimensions. Secure yours before the portal closes.</p>
+
+    <form id="registerForm" class="flex flex-col gap-4">
+      <input type="text" placeholder="Full Name" required
+        class="reg-input">
+      <input type="email" placeholder="Email Address" required
+        class="reg-input">
+      <input type="tel" placeholder="Phone Number" required
+        class="reg-input">
+
+      <button type="submit" class="mt-4 px-8 py-3 rounded-full font-cinzel text-lg border border-amber-400 hover:bg-amber-400 hover:text-black transition relative overflow-hidden">
+        Open the Portal
+      </button>
+    </form>
+
+    <p id="successMsg" class="hidden mt-6 text-amber-400 font-cinzel text-xl">
+      ✦ Your seat in the Multiverse is confirmed ✦
+    </p>
+  </div>
+
+  <!-- background glow -->
+  <div class="reg-glow"></div>
+</section>
+
+<!-- FOOTER -->
+<footer class="py-10 px-6 border-t border-amber-400/10 text-center">
+  <div class="font-cinzel text-lg text-amber-400 mb-3 tracking-wider">GFG × STRANGE</div>
+  <p class="text-gray-500 text-sm mb-4">GeeksforGeeks Student Chapter — Bennett University</p>
+
+  <div class="flex justify-center gap-6 mb-4 text-gray-400 text-lg">
+    <a href="https://www.instagram.com/gfg.bu/" target="_blank" class="hover:text-amber-400 transition"><i class="fa-brands fa-instagram"></i></a>
+    <a href="https://www.linkedin.com/company/gfg-bennett-university/" target="_blank" class="hover:text-amber-400 transition"><i class="fa-brands fa-linkedin"></i></a>
+    <a href="#" class="hover:text-amber-400 transition"><i class="fa-brands fa-discord"></i></a>
+  </div>
+
+  <p class="text-gray-600 text-xs">&copy; 2026 GFG Student Chapter, Bennett University. All dimensions reserved.</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
